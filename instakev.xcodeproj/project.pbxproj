@@ -18,6 +18,8 @@
 		0AE598701C75919D00DBAC53 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5986F1C75919D00DBAC53 /* ProfileViewController.swift */; };
 		0AE598721C75958A00DBAC53 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE598711C75958A00DBAC53 /* PostCell.swift */; };
 		0AE598751C75992F00DBAC53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE598731C75992F00DBAC53 /* Main.storyboard */; };
+		0AEEE98C1C7A2DC400FA8E97 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEE98B1C7A2DC400FA8E97 /* SignInViewController.swift */; };
+		0AEEE98E1C7A3E0400FA8E97 /* UserMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEE98D1C7A3E0400FA8E97 /* UserMedia.swift */; };
 		3CE3C77560C199C337B738D0 /* Pods_instakev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9597A0C4920DECC3ADE234 /* Pods_instakev.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		0AE5986F1C75919D00DBAC53 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0AE598711C75958A00DBAC53 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		0AE598741C75992F00DBAC53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0AEEE98B1C7A2DC400FA8E97 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0AEEE98D1C7A3E0400FA8E97 /* UserMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMedia.swift; path = ../UserMedia.swift; sourceTree = "<group>"; };
 		0C2AD14E3B2AE6E0059524BB /* Pods-instakev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instakev.release.xcconfig"; path = "Pods/Target Support Files/Pods-instakev/Pods-instakev.release.xcconfig"; sourceTree = "<group>"; };
 		1C9597A0C4920DECC3ADE234 /* Pods_instakev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instakev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		974FA3BF8CDAEB9E7C4257FB /* Pods-instakev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instakev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instakev/Pods-instakev.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,9 +116,11 @@
 		0AD56EC81C74C1D200DE96DF /* instakev */ = {
 			isa = PBXGroup;
 			children = (
+				0AEEE98D1C7A3E0400FA8E97 /* UserMedia.swift */,
 				0AD56EC91C74C1D200DE96DF /* AppDelegate.swift */,
 				0AAAF3481C74D3410048EEB4 /* AccountViewController.swift */,
 				0AE598731C75992F00DBAC53 /* Main.storyboard */,
+				0AEEE98B1C7A2DC400FA8E97 /* SignInViewController.swift */,
 				0AE598711C75958A00DBAC53 /* PostCell.swift */,
 				0AE5986F1C75919D00DBAC53 /* ProfileViewController.swift */,
 				0AB28EE91C74DFD100CFC9B8 /* ComposeViewController.swift */,
@@ -346,6 +352,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEEE98C1C7A2DC400FA8E97 /* SignInViewController.swift in Sources */,
+				0AEEE98E1C7A3E0400FA8E97 /* UserMedia.swift in Sources */,
 				0AAAF3471C74C63F0048EEB4 /* LoginViewController.swift in Sources */,
 				0AD56ECA1C74C1D200DE96DF /* AppDelegate.swift in Sources */,
 				0AE598701C75919D00DBAC53 /* ProfileViewController.swift in Sources */,

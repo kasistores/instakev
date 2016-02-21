@@ -14,6 +14,9 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = PFUser.currentUser()?.username
+        
+        self.tabBarController!.tabBar.tintColor = UIColor.whiteColor()
+        self.tabBarController?.tabBar.backgroundColor = UIColor.blackColor()
         // Do any additional setup after loading the view.
     }
 

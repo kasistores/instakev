@@ -17,11 +17,23 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate, U
     let vc = UIImagePickerController()
     let vc2 = UIImagePickerController()
     
+    @IBOutlet weak var photo: UIButton!
+    @IBOutlet weak var library: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var postButton: UIButton!
+    
+    var label = UILabel(frame: CGRectMake(0, 0, 200, 41))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let label = UILabel(frame: CGRectMake(0, 0, 200, 41))
-        label.center = CGPointMake(190, 284)
+        self.backButton.layer.cornerRadius = self.backButton.frame.size.width / 2
+        self.backButton.clipsToBounds = true
+        
+        self.postButton.layer.cornerRadius = 10.0
+        self.photo.layer.cornerRadius = 10.0
+        self.library.layer.cornerRadius = 10.0
+        label.center = CGPointMake(190, 340)
         label.textColor = UIColor.whiteColor()
         label.textAlignment = NSTextAlignment.Center
         label.text = "Choose or take a photo!"
@@ -51,14 +63,27 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate, U
         self.presentViewController(vc2, animated: true, completion: nil)
     }
     
+    @IBAction func onTap(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
     func imagePickerController(picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-            //let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
-            let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
+            //let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
             
             vc.dismissViewControllerAnimated(true) { () -> Void in
+                self.postImageView.image = editedImage
+                self.label.hidden = true
+                
             }
-            self.postImageView.image = originalImage
+            
+            vc2.dismissViewControllerAnimated(true) { () -> Void in
+                self.postImageView.image = editedImage
+                self.label.hidden = true
+            }
+
+            //self.postImageView.image = originalImage
     }
     
     

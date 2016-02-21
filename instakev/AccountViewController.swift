@@ -16,6 +16,8 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("homed!")
+        self.tabBarController!.tabBar.tintColor = UIColor.whiteColor()
+        self.tabBarController?.tabBar.backgroundColor = UIColor.blackColor()
         // Do any additional setup after loading the view.
     }
 
