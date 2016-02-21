@@ -46,24 +46,18 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        if let posts = posts {
-            
-            return self.posts!.count
-            
-        } else {
-            return 0
-        }
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
          let cell = tableView.dequeueReusableCellWithIdentifier("PostCell", forIndexPath: indexPath) as! PostCell
         
-        let post = self.posts![indexPath.row]
+        /*let post = self.posts![indexPath.row]
         let numLikes = post["likesCount"]
         
         cell.userNameLabel.text = post["author"].username
         cell.captionLabel.text = post["caption"] as? String
-        cell.numLikes.text = numLikes as? String
+        //cell.numLikes.text = numLikes as? String
         
         let pictureFile = post["media"] as! PFFile
         
@@ -76,7 +70,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
                 }
             }
             
-        }
+        }*/
         
         return cell
         

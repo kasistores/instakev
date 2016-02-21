@@ -11,9 +11,12 @@ import Parse
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var logoutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = PFUser.currentUser()?.username
+        self.logoutButton.layer.cornerRadius = 10.0
+        
         
         self.tabBarController!.tabBar.tintColor = UIColor.whiteColor()
         self.tabBarController?.tabBar.backgroundColor = UIColor.blackColor()
