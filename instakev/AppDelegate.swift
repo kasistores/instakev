@@ -13,10 +13,13 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+     var storyboard = UIStoryboard(name: "Main", bundle: nil)
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
         
         // Initialize Parse
         // Set applicationId, clientKey, and server based on the values in the Heroku settings.
@@ -27,6 +30,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://instakev.herokuapp.com/parse"
             })
         )
+        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
+        // setup parse keys
+        //Parse.setApplicationId("instakev", clientKey: "fbeirlgbriewbgklrbegkjrg")
+        
+        // check if user is logged in.
+        if PFUser.currentUser() != nil {
+            print("persisted log in")
+            print(PFUser.currentUser()?.username)
+            let AccountViewController = storyboard.instantiateViewControllerWithIdentifier("go") as! UITabBarController
+    
+            window?.rootViewController = AccountViewController
+            
+        }
         
         return true
     }
