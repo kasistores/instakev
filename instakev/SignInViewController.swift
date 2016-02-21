@@ -59,6 +59,10 @@ class SignInViewController: UIViewController {
             }
     }
     
+    @IBAction func onLeave(sender: AnyObject) {
+        self.performSegueWithIdentifier("login", sender: nil)
+    }
+    
     
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)

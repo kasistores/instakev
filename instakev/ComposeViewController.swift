@@ -87,12 +87,13 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate, U
     }
     
     
-    @IBAction func onSend(sender: AnyObject) {
-        
-    }
-    
     @IBAction func onLeave(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
+    }
+    
+    @IBAction func onPost(sender: AnyObject) {
+        UserMedia.postUserImage(postImageView.image!, withCaption: postField.text, withCompletion: nil)
+        self.performSegueWithIdentifier("back", sender: nil)
     }
     
     override func didReceiveMemoryWarning() {

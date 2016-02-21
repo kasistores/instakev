@@ -21,7 +21,7 @@ class UserMedia: NSObject {
      - parameter caption: Caption text input by the user
      - parameter completion: Block to be executed after save operation is complete
      */
-    class func postUserImage(image: UIImage?, withCaption caption: String?, withCompletion completion: PFBooleanResultBlock?) {
+    class func postUserImage(image: UIImage, withCaption caption: String?, withCompletion completion: PFBooleanResultBlock?) {
         // Create Parse object PFObject
         let media = PFObject(className: "UserMedia")
         
@@ -31,6 +31,8 @@ class UserMedia: NSObject {
         media["caption"] = caption
         media["likesCount"] = 0
         media["commentsCount"] = 0
+        
+        print("did it work?")
         
         // Save object (following function will save the object in Parse asynchronously)
         media.saveInBackgroundWithBlock(completion)
