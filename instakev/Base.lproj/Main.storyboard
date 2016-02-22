@@ -445,15 +445,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgW-n5-U68">
-                                <rect key="frame" x="126" y="292" width="123" height="84"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aE-AF-HEP">
+                                <rect key="frame" x="124" y="293" width="128" height="81"/>
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.33725490200000002" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onLogout:" destination="5bL-bh-ju1" eventType="touchUpInside" id="yWp-mb-y7b"/>
+                                    <action selector="onLogout:" destination="5bL-bh-ju1" eventType="touchUpInside" id="RTc-jw-iPH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -462,8 +462,8 @@
                     <navigationItem key="navigationItem" title="Profile" id="GUj-sH-uoC"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="logoutButton" destination="XgW-n5-U68" id="sho-lv-fuV"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="LogoutSegue" id="ePr-IO-1lm"/>
+                        <outlet property="logoutButton" destination="8aE-AF-HEP" id="HFh-1N-jDp"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="LogoutSegue" modalTransitionStyle="coverVertical" id="ePr-IO-1lm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gX3-lz-KfC" userLabel="First Responder" sceneMemberID="firstResponder"/>

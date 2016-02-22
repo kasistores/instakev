@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 
+
 class AccountViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var currentUser = PFUser.currentUser()
@@ -26,7 +27,18 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.dataSource = self
         // Do any additional setup after loading the view.
         
-        let query = PFQuery(className: "UserMedia")
+        let predicate = NSPredicate(format: "likesCount > 100")
+        
+        var query = PFQuery(className: "UserMedia")
+        query = PFQuery(className: "UserMedia", predicate: predicate)
+        query.whereKey("likesCount", greaterThan: 100)
+        query.orderByDescending("createdAt")
+        query.includeKey("author")
+        query.limit = 20
+        
+        let media = PFObject(className: "UserMedia")
+        media["author"] = PFUser.currentUser()
+
         
         query.findObjectsInBackgroundWithBlock { (media: [PFObject]?, error: NSError?) -> Void in
             if let media = media {
@@ -46,18 +58,23 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 0
+        if let posts = posts {
+            return posts.count
+        }
+        else {
+            return 0
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
          let cell = tableView.dequeueReusableCellWithIdentifier("PostCell", forIndexPath: indexPath) as! PostCell
         
-        /*let post = self.posts![indexPath.row]
+        let post = self.posts![indexPath.row]
         let numLikes = post["likesCount"]
         
         cell.userNameLabel.text = post["author"].username
         cell.captionLabel.text = post["caption"] as? String
-        //cell.numLikes.text = numLikes as? String
+        cell.numLikes.text = numLikes as? String
         
         let pictureFile = post["media"] as! PFFile
         
@@ -70,7 +87,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
                 }
             }
             
-        }*/
+        }
         
         return cell
         
