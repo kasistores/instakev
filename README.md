@@ -17,9 +17,11 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 - [ ] Show the username and creation time for each post
-- [ ] When the user is uploading a photo, show a progress indicator to show how much of the photo has been uploaded
-- [ ] User can connect his or her Facebook account
-- [ ] User can comment on a post and see all comments for each post
+- [ ] After the user submits a new post, show a progress HUD while the post is being uploaded to Parse.
+- [ ] User Profiles:
+   - [ ] Allow the logged in user to add a profile photo
+   - [ ] Display the profile photo with each post
+   - [ ] Tapping on a post's username or profile photo goes to that user's profile page
 
 The following **additional** features are implemented:
 
@@ -35,8 +37,6 @@ Please list two areas of the assignment you'd like to **discuss further with you
 Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/zK94eDj.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-click on link for gif: http://i.imgur.com/zK94eDj.gif
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
