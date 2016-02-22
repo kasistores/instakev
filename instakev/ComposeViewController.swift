@@ -88,12 +88,13 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate, U
     
     
     @IBAction func onLeave(sender: AnyObject) {
-        navigationController?.popViewControllerAnimated(true)
+        self.performSegueWithIdentifier("back", sender: nil)
     }
     
     @IBAction func onPost(sender: AnyObject) {
         UserMedia.postUserImage(postImageView.image!, withCaption: postField.text, withCompletion: nil)
         self.performSegueWithIdentifier("back", sender: nil)
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -102,14 +103,15 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate, U
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
+        
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

@@ -11,7 +11,6 @@ import UIKit
 class PostCell: UITableViewCell {
 
     @IBOutlet weak var postImage: UIImageView!
-    @IBOutlet weak var numLikes: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     
