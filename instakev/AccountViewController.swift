@@ -12,8 +12,6 @@ import Parse
 
 class AccountViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var currentUser = PFUser.currentUser()
-    
     @IBOutlet var tableView: UITableView!
     
     var posts : [PFObject]!
@@ -41,6 +39,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
 
         
         query.findObjectsInBackgroundWithBlock { (media: [PFObject]?, error: NSError?) -> Void in
+            
             if let media = media {
                 
                 self.posts = media
@@ -59,6 +58,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         if let posts = posts {
+             print(posts.count)
             return posts.count
         }
         else {
