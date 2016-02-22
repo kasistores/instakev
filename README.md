@@ -2,7 +2,7 @@
 
 **Instakev** is a photo sharing app using Parse as its backend.
 
-Time spent: **8** hours spent in total
+Time spent: **10** hours spent in total
 
 ## User Stories
 
